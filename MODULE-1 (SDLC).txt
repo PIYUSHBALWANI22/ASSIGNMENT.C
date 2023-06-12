@@ -1,0 +1,154 @@
+MODULE-1 (SDLC)
+
+
+
+Q:1) WHAT IS SOFTWARE ? WHAT IS SOFTWARE ENGINEERING?
+Software is a set of instructions, data or programs used to operate computers and execute specific tasks. It is the opposite of hardware, which describes the physical aspects of a computer. Software is a generic term used to refer to applications, scripts and programs that run on a device. It can be thought of as the variable part of a computer, while hardware is the invariable part.
+
+The two main categories of software are application software and system software. An application is software that fulfills a specific need or performs tasks. System software is designed to run a computer's hardware and provides a platform for applications to run on top of.
+
+Other types of software include programming software, which provides the programming tools software developers need; middleware, which sits between system software and applications; and driver software, which operates computer devices and peripherals.
+
+Early software was written for specific computers and sold with the hardware it ran on. In the 1980s, software began to be sold on floppy disks, and later on CDs and DVDs. Today, most software is purchased and directly downloaded over the internet. Software can be found on vendor websites or application service provider websites.
+
+
+Examples and types of software
+Among the various categories of software, the most common types include the following:
+
+Application software. The most common type of software, application software is a computer software package that performs a specific function for a user, or in some cases, for another application. An application can be self-contained, or it can be a group of programs that run the application for the user. Examples of modern applications include office suites, graphics software, databases and database management programs, web browsers, word processors, software development tools, image editors and communication platforms.
+System software. These software programs are designed to run a computer's application programs and hardware. System software coordinates the activities and functions of the hardware and software. In addition, it controls the operations of the computer hardware and provides an environment or platform for all the other types of software to work in. The OS is the best example of system software; it manages all the other computer programs. Other examples of system software include the firmware, computer language translators and system utilities.
+Driver software. Also known as device drivers, this software is often considered a type of system software. Device drivers control the devices and peripherals connected to a computer, enabling them to perform their specific tasks. Every device that is connected to a computer needs at least one device driver to function. Examples include software that comes with any nonstandard hardware, including special game controllers, as well as the software that enables standard hardware, such as USB storage devices, keyboards, headphones and printers.
+Middleware. The term middleware describes software that mediates between application and system software or between two different kinds of application software. For example, middleware enables Microsoft Windows to talk to Excel and Word. It is also used to send a remote work request from an application in a computer that has one kind of OS, to an application in a computer with a different OS. It also enables newer applications to work with legacy ones.
+Programming software. Computer programmers use programming software to write code. Programming software and programming tools enable developers to develop, write, test and debug other software programs. Examples of programming software include assemblers, compilers, debuggers and interpreters.
+Diagram of the software stack
+Here is a complete picture of the full software stack.
+How does software work?
+All software provides the directions and data computers need to work and meet users' needs. However, the two different types -- application software and system software -- work in distinctly different ways.
+
+SOFTWARE ENGINEERING: Software engineering is an engineering-based approach to software development. It is the process of developing, testing and deploying computer applications to solve real-world problems by adhering to a set of engineering principles and best practices12. A software engineer is a person who applies the engineering design process to design, develop, maintain, test, and evaluate computer software1. Software engineering includes a variety of techniques, tools, and methodologies, including requirements analysis, design, testing, and maintenance3
+
+Q:2) EXPLAIN TYPES OF SOFTWARE.
+
+-> THERE ARE TWO TYPES OF SOFTWARE,
+     1)  SYSTEM SOFTWARE
+     2) APPLICATION SOFTWARE
+
+SYSTEM SOFTWARE:- System software is software that directly operates the computer hardware and provides the basic functionality to the users as well as to the other software to operate smoothly. Or in other words, system software basically controls a computer’s internal functioning and also controls hardware devices such as monitors, printers, and storage devices, etc. It is like an interface between hardware and user applications, it helps them to communicate with each other because hardware understands machine language(i.e. 1 or 0) whereas user applications are work in human-readable languages like English, Hindi, German, etc. so system software converts the human-readable language into machine language and vice versa.
+
+
+APPLICATION SOFTWARE:- Software that performs special functions or provides functions that are much more than the basic operation of the computer is known as application software. Or in other words, application software is designed to perform a specific task for end-users. It is a product or a program that is designed only to fulfill end-users’ requirements. It includes word processors, spreadsheets, database management, inventory, payroll programs, etc.
+
+
+Q:3) WHAT IS SDLC? EXPLAIN EACH PHASE OF SDLC.
+
+
+->The Software Development Life Cycle (SDLC) is a process used by software development organizations to plan, design, develop, test, deploy, and maintain software applications.
+
+->SDLC (Software Development Life Cycle) is used in Every Software Development Company because it is the root of the Development Cycle, if that model would not exist in the world, firstly no software can build secondly if any how it would be made, it’s not going to succeed it has no use, because of no maintenance, but Luckily SDLC model exist in Tech world But why we need it Actually!
+
+There are several reasons why organizations use the Software Development Life Cycle (SDLC) when developing software applications:
+
+To provide a structured and organized approach to software development: The SDLC provides a framework for managing the software development process, which helps to ensure that all necessary steps are taken and that the final product meets the requirements.
+
+
+THERE ARE SIX PHASES IN THE SDLC,
+
+1. Requirements gathering and analysis: This phase involves gathering information about the software requirements from stakeholders, such as customers, end-users, and business analysts.
+2. Design: In this phase, the software design is created, which includes the overall architecture of the software, data structures, and interfaces. It has two steps:
+
+High-level design (HLD): It gives the architecture of software products.
+Low-level design (LLD): It describes how each and every feature in the product should work and every component.
+3. Implementation or coding: The design is then implemented in code, usually in several iterations, and this phase is also called as Development.
+
+things you need to know about this phase:
+
+This is the longest phase in SDLC model.
+This phase consists of Front end + Middleware + Back-end.
+In front-end: Development of coding is done even SEO settings are done.
+In Middleware: They connect both the front end and back end.
+In the back-end: A database is created.
+4. Testing: The software is thoroughly tested to ensure that it meets the requirements and works correctly.
+
+5. Deployment: After successful testing, The software is deployed to a production environment and made available to end-users.
+ 6. Maintenance: This phase includes ongoing support, bug fixes, and updates to the software.
+
+There are different methodologies that organizations can use to implement the SDLC, such as Waterfall, Agile, Scrum, V-Model and DevOps.
+
+Q:4) WHAT IS DFD? 
+--> DFD is the abbreviation for Data Flow Diagram. The flow of data of a system or a process is represented by DFD. It also gives insight into the inputs and outputs of each entity and the process itself. DFD does not have control flow and no loops or decision rules are present. Specific operations depending on the type of data can be explained by a flowchart.
+
+It is a graphical tool, useful for communicating with users ,managers and other personnel. it is useful for analyzing existing as well as proposed system.
+
+It provides an overview of 
+
+What data is system processes.
+What transformation are performed.
+What data are stored.
+What results are produced , etc.
+Data Flow Diagram can be represented in several ways. The DFD belongs to structured-analysis modeling tools. Data Flow diagrams are very popular because they help us to visualize the major steps and data involved in software-system processes.
+Components of DFD
+The Data Flow Diagram has 4 components:
+
+Process Input to output transformation in a system takes place because of process function. The symbols of a process are rectangular with rounded corners, oval, rectangle or a circle. The process is named a short sentence, in one word or a phrase to express its essence
+Data Flow Data flow describes the information transferring between different parts of the systems. The arrow symbol is the symbol of data flow. A relatable name should be given to the flow to determine the information which is being moved. Data flow also represents material along with information that is being moved. Material shifts are modeled in systems that are not merely informative. A given flow should only transfer a single type of information. The direction of flow is represented by the arrow which can also be bi-directional.
+Warehouse The data is stored in the warehouse for later use. Two horizontal lines represent the symbol of the store. The warehouse is simply not restricted to being a data file rather it can be anything like a folder with documents, an optical disc, a filing cabinet. The data warehouse can be viewed independent of its implementation. When the data flow from the warehouse it is considered as data reading and when data flows to the warehouse it is called data entry or data updating.
+Terminator The Terminator is an external entity that stands outside of the system and communicates with the system. It can be, for example, organizations like banks, groups of people like customers or different departments of the same organization, which is not a part of the model system and is an external entity. Modeled systems also communicate with terminator.
+
+Q:5) WHAT IS FLOW CHART? CREATE A FLOWCHART TO MAKE ADDITION OF TWO NUMBERS.
+
+-->Flowcharts are nothing but the graphical representation of the data or the algorithm for a better understanding of the code visually. It displays step-by-step solutions to a problem, algorithm, or process. It is a pictorial way of representing steps that are preferred by most beginner-level programmers to understand algorithms of computer science, thus it contributes to troubleshooting the issues in the algorithm. A flowchart is a picture of boxes that indicates the process flow in a sequential manner. Since a flowchart is a pictorial representation of a process or algorithm, it’s easy to interpret and understand the process. To draw a flowchart, certain rules need to be followed which are followed by all professionals to draw a flowchart and is widely accepted all over the countries.
+
+Use of a flowchart
+Following are the uses of a flowchart:
+
+It is a pictorial representation of an algorithm that increases the readability of the program.
+Complex programs can be drawn in a simple way using a flowchart.
+It helps team members get an insight into the process and use this knowledge to collect data, detect problems, develop software, etc.
+A flowchart is a basic step for designing a new process or add extra features.
+Communication with other people becomes easy by drawing flowcharts and sharing them.
+
+                                               START
+                                                    
+                                          
+                                 INPUT NUMBER-1,
+
+                               INPUT NUMBER-2
+
+
+                        SUM=NUMBER-1 + NUMBER-2
+
+
+
+                               PRINT SUM
+
+
+                                  END
+
+
+Q:6) WHAT IS USE CASE DIAGRAM?
+
+-->A use case diagram is used to represent the dynamic behavior of a system. It encapsulates the system's functionality by incorporating use cases, actors, and their relationships. It models the tasks, services, and functions required by a system/subsystem of an application. It depicts the high-level functionality of a system and also tells how the user handles a system.
+
+Purpose of Use Case Diagrams
+The main purpose of a use case diagram is to portray the dynamic aspect of a system. It accumulates the system's requirement, which includes both internal as well as external influences. It invokes persons, use cases, and several things that invoke the actors and elements accountable for the implementation of use case diagrams. It represents how an entity from the external environment can interact with a part of the system.
+
+Following are the purposes of a use case diagram given below:
+
+It gathers the system's needs.
+It depicts the external view of the system.
+It recognizes the internal as well as external factors that influence the system.
+It represents the interaction between the actors.
+How to draw a Use Case diagram?
+It is essential to analyze the whole system before starting with drawing a use case diagram, and then the system's functionalities are found. And once every single functionality is identified, they are then transformed into the use cases to be used in the use case diagram.
+
+After that, we will enlist the actors that will interact with the system. The actors are the person or a thing that invokes the functionality of a system. It may be a system or a private entity, such that it requires an entity to be pertinent to the functionalities of the system to which it is going to interact.
+
+Once both the actors and use cases are enlisted, the relation between the actor and use case/ system is inspected. It identifies the no of times an actor communicates with the system. Basically, an actor can interact multiple times with a use case or system at a particular instance of time.
+
+Following are some rules that must be followed while drawing a use case diagram:
+
+A pertinent and meaningful name should be assigned to the actor or a use case of a system.
+The communication of an actor with a use case must be defined in an understandable way.
+Specified notations to be used as and when required.
+The most significant interactions should be represented among the multiple no of interactions between the use case and actors.
+
