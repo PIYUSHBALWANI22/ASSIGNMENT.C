@@ -1,0 +1,175 @@
+MODULE-2.1(C LANGUAGE FUNDAMENTAL)
+
+Q.1) Display this information using printf.
+      1.Your name 
+      2.Your birth date
+      3.Your age
+      4.Your address
+
+-->
+
+#include<stdio.h>
+main()
+{
+	printf("My name is Piyush");
+	printf("\nMy birth date is 22nd july 2004");
+	printf("\nMy age is 18 years");
+	printf("\nMy address is 272/c old g-ward,kubernagar,Ahmedabad");
+}
+
+Q.2) Write a program to make simple calculator (to make addition,substraction,multiplication,division).
+
+-->#include<stdio.h>
+main()
+{
+	int a,b,i;
+	printf("Enter a:");
+	scanf("%d",&a);
+	printf("Enter b:");
+	scanf("%d",&b);
+	printf("Enter Your choice=");
+	scanf("%d",&i);
+	switch(i)
+	{
+		case 1:
+			printf("Addition=%d",a+b);
+			break;
+			
+		case 2:
+			printf("substraction=%d",a-b);
+			break;
+			
+		case 3:
+			printf("multiplication=%d",a*b);
+			break;
+			
+		case 4:
+			printf("division=%d",a/b);
+			break;	
+	}
+}
+
+
+
+Q.3) Write a program to find area of circle ,rectangle and triangle.
+
+--> 
+     #include<stdio.h>
+ main() 
+{
+  int fig_code;
+  float side, base, length, breadth, height, area, radius;
+  printf("-------------------------\n");
+  printf(" 1 --> Circle\n");
+  printf(" 2 --> Rectangle\n");
+  printf(" 3 --> Triangle\n");
+  printf("-------------------------\n");
+  printf("Enter the Figure code\n");
+  scanf("%d", & fig_code);
+  switch (fig_code) {
+  case 1:
+    printf("Enter the radius\n");
+    scanf("%f", & radius);
+    area = 3.142 * radius * radius;
+    printf("Area of a circle=%f\n", area); 
+    break;
+  case 2:
+    printf("Enter the breadth and length\n");
+    scanf("%f %f", & breadth, & length);
+    area = breadth * length;
+    printf("Area of a Rectangle=%f\n", area); 
+    break;
+  case 3:
+    printf("Enter the base and height\n");
+    scanf("%f %f", & base, & height);
+    area = 0.5 * base * height;
+    printf("Area of a Triangle=%f\n", area); 
+    break;
+  default:
+    printf("Error in figure code\n");
+    break;
+  } 
+} 
+
+
+Q.4) Write a program to find simple intrest.
+
+-->
+    #include <stdio.h>
+int main()
+{
+	float P , R , T;
+	printf("Enter p,r, and t values \n");
+	scanf("%f %f %f",&P,&R,&T);
+	float SI = (P * T * R) / 100;
+
+	printf("Simple Interest = %f\n", SI);
+
+	return 0;
+}
+
+
+Q.5) Write a program to check if the given year is a leap year or not.
+
+-->
+    #include <stdio.h>
+#include <stdbool.h>
+
+bool checkYear(int year)
+{
+
+if (year % 400 == 0)
+	return true;
+
+if (year % 100 == 0)
+	return false;
+	
+if (year % 4 == 0)
+	return true;
+return false;
+}
+int main()
+{
+int year = 2004;
+
+checkYear(year)? printf("Leap Year"):
+				printf("Not a Leap Year");
+return 0;
+}
+
+Q.6) Write a program to convert years into days and days into years.
+
+-->
+    #include<stdio.h>
+
+int main()
+{
+    int number_of_days, years, months, days;
+
+    printf("Enter number of days: ");
+    scanf("%d", &number_of_days);
+
+    years = number_of_days / 365;
+
+    months = (number_of_days - years *365) / 30;
+
+    days = (number_of_days - years * 365 - months*30);
+
+    printf("Years = %d", years);
+    printf("\nMonths = %d", months);
+    printf("\nDays = %d", days);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
