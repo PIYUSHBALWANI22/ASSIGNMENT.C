@@ -1,0 +1,331 @@
+Q.1)Write a program to find out the max number from given array using function.
+
+-->#include <stdio.h>
+int main()
+{
+  int array[100], size, c, location = 0;
+
+  printf("Enter the number of elements in array\n");
+  scanf("%d", &size);
+
+  printf("Enter %d integers\n", size);
+
+  for (c = 0; c < size; c++)
+    scanf("%d", &array[c]);
+
+  for (c = 1; c < size; c++)
+    if (array[c] > array[location])
+      location = c;
+
+  printf("Maximum element is present at location %d and its value is %d.\n", location+1, array[location]);
+  return 0;
+}
+
+
+Q.2)Write a program of Addition, Subtraction, Multiplication and Division using Switch
+case.(Must Be Menu Driven)
+
+-->#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int a,b;
+    int op;
+    printf(" 1.Addition\n 2.Subtraction\n 3.Multiplication\n 4.Division\n");
+    printf("Enter the values of a & b: ");
+    scanf("%d %d",&a,&b);
+    printf("Enter your Choice : ");
+    scanf("%d",&op);
+    switch(op)
+    {
+    case 1	:
+        printf("Sum of %d and %d is : %d",a,b,a+b);
+        break;
+    case 2	:
+        printf("Difference of %d and %d is : %d",a,b,a-b);
+        break;
+    case 3	:
+        printf("Multiplication of %d and %d is : %d",a,b,a*b);
+        break;
+    case 4	:
+        printf("Division of Two Numbers is %d : ",a/b);
+        break;
+    default	:
+        printf(" Enter Your Correct Choice.");
+        break;
+    }
+    return 0;
+}
+
+
+Q.3)Write a program to find reverse of string using recursion.
+
+--># include <stdio.h>
+
+void reverse(char *str)
+{
+if (*str)
+{
+	reverse(str + 1);
+	printf("%c", *str);
+}
+}
+
+int main()
+{
+char a[] = "Avengers Assemble";
+reverse(a);
+return 0;
+}
+
+
+Q.4)Write a program to find factorial using recursion.
+
+-->#include<stdio.h>
+int getfactorial(int x)
+{
+	if(x>1)
+	{
+		return x* getfactorial(x-1);
+	}
+}
+main()
+{
+	printf("%d",getfactorial(14));
+	
+}
+
+
+Q.5)Write a program to take two Array input from user and sort them in ascending or
+descending order as per user’s choice.
+
+-->#include <stdio.h>
+void main()
+{
+    int arr1[100], arr2[100], merge[200], n1, n2, size, i, j, k;
+    printf("Enter Array 1 Size : ");
+    scanf("%d", &n1);
+    printf("Enter Array 1 Elements : ");
+    for(i=0; i<n1; i++)
+    {
+        scanf("%d", &arr1[i]);
+        merge[i] = arr1[i];
+    }
+    printf("\nEnter Array 2 Size : ");
+    scanf("%d", &n2);
+    printf("Enter Array 2 Elements : ");
+    for(i=0; i<n2; i++)
+    {
+        scanf("%d", &arr2[i]);
+        merge[n1+i] = arr2[i];
+    }
+    size = n1 + n2;
+    for(i=0; i<size; i++)
+    {
+        for(j=i+1; j<size; j++)
+        {
+            if(merge[i]>merge[j])
+            {
+                k = merge[i];
+                merge[i] = merge[j];
+                merge[j] = k;
+            }
+        }
+    }
+    printf("\nSorted Array (Ascending Order) : ");
+    for(i=0; i<size; i++)
+    {
+        printf("%d ", merge[i]);
+    }
+}
+
+
+Q.6)Write a program Find out length of string without using inbuilt function.
+
+-->#include <stdio.h>
+int main()
+{
+    char str[100],i;
+    printf("Enter a string: \n");
+    scanf("%s",str);
+
+    for(i=0; str[i]!='\0'; ++i);
+       printf("\nLength of input string: %d",i);
+    
+}
+
+
+Q.7)Write a program to reverse a string and check that the string is palindrome or not.
+
+-->#include <stdio.h>
+#include <string.h>
+
+int main(){
+	char str[100], tmp, rev[100];
+	int begin, end;
+	
+	printf("Enter string: ");
+	scanf("%s", &str);
+	
+	strcpy(rev,str);	
+	
+	begin = 0;
+	end = strlen(str) - 1;	
+	while(begin < end){
+		tmp = str[begin];
+		str[begin] = str[end];
+		str[end] = tmp;
+		begin++;
+		end--;
+	}
+	
+	printf("Reverse string: %s\n", str);
+	
+	if(strcmp(rev,str) == 0)
+		printf("%s is palindrome!\n", str);
+	else
+		printf("%s is not palindrome!\n", str);
+		
+	return 0;
+}
+
+
+Q.8)Write a program of structure employee that provides the following
+information -print and display empno, empname, address and age.
+
+-->#include <stdio.h>
+#include <string.h>
+
+struct employee {
+    int empno;
+    char empname[20];
+    char address[50];
+    int age;
+};
+
+int main() {
+    struct employee emp;
+    emp.empno = 1;
+    strcpy(emp.empname, "Ms.kim ");
+    strcpy(emp.address, "171/A bleeker street.");
+    emp.age = 22;
+
+    printf("Employee Number: %d\n", emp.empno);
+    printf("Employee Name: %s\n", emp.empname);
+    printf("Address: %s\n", emp.address);
+    printf("Age: %d\n", emp.age);
+
+}
+
+
+Q.9)Write a program of structure for five employee that provides the following
+information -print and display empno, empname, address and age.
+
+-->#include <stdio.h>
+#include <string.h>
+
+struct employee {
+    int empno;
+    char empname[20];
+    char address[50];
+    int age;
+};
+
+int main() {
+    struct employee emp[5];
+    int i;
+
+    for(i=0; i<5; ++i) {
+        emp[i].empno = i+1;
+        printf("\nEnter details of employee %d:\n", emp[i].empno);
+        printf("Enter name: ");
+        scanf("%s", emp[i].empname);
+        printf("Enter address: ");
+        scanf("%s", emp[i].address);
+        printf("Enter age: ");
+        scanf("%d", &emp[i].age);
+    }
+
+    printf("\nDetails of all employees:\n");
+    for(i=0; i<5; ++i) {
+        printf("Employee number: %d\n", i+1);
+        printf("Name: %s\n", emp[i].empname);
+        printf("Address: %s\n", emp[i].address);
+        printf("Age: %d\n", emp[i].age);
+    }
+
+    return 0;
+}
+
+
+Q.10)Write a program to show difference between Structure and Union.
+
+-->#include <stdio.h> 
+
+struct Employee 
+{
+  int age;  
+  char Name[50];
+  char Department[20];
+  float Salary;
+};
+
+union Person 
+{
+  int ag;  
+  char Nam[50];
+  char Departent[20];
+  float Salar;
+};
+
+int main() 
+{
+  struct Employee emp1;
+  union Person Person1;
+    
+  printf(" The Size of Employee Structure = %d\n", sizeof (emp1) );
+  printf(" The Size of Person Union = %d\n", sizeof (Person1));
+
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
