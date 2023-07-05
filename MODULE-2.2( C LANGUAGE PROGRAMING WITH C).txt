@@ -1,0 +1,449 @@
+Q.1) Write a program to swap two numbers without using third variable.
+
+-->
+     #include<stdio.h>  
+ int main()    
+{    
+int a=10, b=20;      
+printf("Before swap a=%d b=%d",a,b);      
+a=a+b;    
+b=a-b;    
+a=a-b;
+printf("\nAfter swap a=%d b=%d",a,b);     
+}   
+
+
+Q.2 Write a program to find number is even or odd using ternary operator.
+
+-->
+     #include<stdio.h>  
+int main()   
+{   
+    int number;
+    
+    printf("Enter a number to check for Even / Odd = ");
+    scanf("%d", &number);
+
+	(number%2==0)? printf("%d is Even",number):printf("%d is Odd",number);
+	
+}
+
+Q.3) Write a program to show
+       1.Monday to sunday using switch case
+       2.Vowel or Consonant using switch case
+
+-->(1)
+     #include<stdio.h>
+main()
+{
+	int day;
+	printf("enter a day:");
+	scanf("%d",&day);
+	switch(day)
+	{
+		case 1:
+			printf("Monday");
+			break;
+			
+		case 2:
+		printf("Tuesday");
+		break;
+		
+		case 3:
+		printf("Wednesday");
+		break;
+		
+		case 4:
+		printf("Thursday");
+		break;
+		
+		case 5:
+		printf("Friday");
+		break;
+		
+		case 6:
+		printf("Saturday");
+		break;
+		
+		case 7:
+		printf("Sunday");
+		break;
+		
+		
+			
+	}
+}
+
+-->(2)
+       #include <stdio.h>
+
+int main()
+{
+    char ch;
+
+    printf("Enter any alphabet: ");
+    scanf("%c", &ch);
+
+    switch(ch)
+    {
+        case 'a': 
+            printf("Vowel");
+            break;
+        case 'e': 
+            printf("Vowel");
+            break;
+        case 'i': 
+        printf("Vowel");
+            break;
+        case 'o': 
+            printf("Vowel");
+            break;
+        case 'u': 
+            printf("Vowel");
+            break;
+        case 'A': 
+            printf("Vowel");
+            break;
+        case 'E': 
+            printf("Vowel");
+            break;
+        case 'I': 
+            printf("Vowel");
+            break;
+        case 'O': 
+            printf("Vowel");
+            break;
+        case 'U': 
+            printf("Vowel");
+            break;
+        default: 
+	      printf("Consonant");
+    }
+
+}
+
+Q.4) LOOPING PROGRAMS:
+      
+1.Write a program to print 972 to 897 using for loop
+
+-->#include<stdio.h>
+main()
+{
+	int i;
+	
+	for(i=972; i>=897; i--)
+	{
+		printf("\n%d",i);
+	}
+}
+
+2.Write a program to take 10 no. input from user and find out....
+
+-->#include<stdio.h>
+main()
+{
+	int i;
+	int n;
+	printf("Enter the Number :");
+	scanf("%d",&n);
+	for (i=1;i<=n;i++)
+	{
+		
+		printf("\n%d",i);
+		
+	}
+}
+
+3.How many even numbers are there.
+
+-->#include<stdio.h>
+main()
+{
+	int i;
+	int n;
+	printf("Enter the Number :");
+	scanf("%d",&n);
+	for (i=1;i<=n;i++)
+	{
+		if(i%2==0)
+		{
+		printf("\n%d",i);
+		}
+		
+	}
+}
+
+4.How many odd numbers are there.
+
+-->#include<stdio.h>
+main()
+{
+	int i;
+	int n;
+	printf("Enter the Number :");
+	scanf("%d",&n);
+	for (i=1;i<=n;i++)
+	{
+		if(i%2!=0)
+		{
+		printf("\n%d",i);
+		}
+		
+	}
+}
+
+5.Sum of even numvers.
+
+-->#include<stdio.h>
+main()
+{
+	int i;
+	int sum=0;
+	int n;
+	printf("Enter the Number :");
+	scanf("%d",&n);
+	for (i=0;i<=n;i=i+2)
+	{
+		printf("\n%d",i);
+		sum=sum+i;
+	}
+	printf("\n%d",sum);
+}
+
+6.Sum of odd numbers.
+
+-->#include<stdio.h>
+main()
+{
+	int i;
+	int n;
+	printf("Enter the Number :");
+	scanf("%d",&n);
+	int sum=0;
+	for (i=1;i<=n;i=i+2)
+	{
+		printf("\n%d",i);
+		sum=sum+i;
+	}
+	printf("\n%d",sum);
+}
+
+
+Q.5)Write a program to print table up to given numbers.
+
+--> #include<stdio.h>
+main()
+{
+	int i;
+	int n;
+	printf("Enter an Number:");
+	scanf("%d",&n);
+	
+	for(i=1;i<=10;i++)
+	{
+		printf("\n%d * %d = %d",n,i,n*i);
+	}
+}
+
+
+Q.6) Write a program to print factorial of given numbers.
+
+-->#include<stdio.h>
+main()
+{
+	int i;
+	printf("Enter a Number :");
+	scanf("%d",&i);
+	int mul=1;
+	
+	for(i=i;i>=1;i--)
+	{
+		printf("\n%d",i);
+		mul=mul*i;
+	}
+	printf("\nfactorial of number=%d",mul);
+}
+
+
+Q.7) Write a program to print fibonacci series up to given numbers.
+
+-->#include<stdio.h>
+main()
+{
+	int n1=0,n2=1,n3,i,number;
+	printf("Enter the value :");
+	scanf("%d",&number);
+	
+	printf("%d %d",n1,n2);
+	
+	for(i=2;i<=number;i++)
+	{
+		n3=n2+n1;
+		printf("%d",n3);
+		n1=n2;
+		n2=n3;	
+	}	
+}
+
+
+Q.8) Write a program to print number in reverse order.
+
+-->#include<stdio.h>
+main()
+{
+	int number;
+	printf("Enter the Number :");
+	scanf("%d",&number);
+	
+	int reverse = 0;
+	
+	while(number>0)
+	{
+		reverse = number%10;
+		printf("%d",reverse);
+		number=number/10;
+	}
+	
+}
+
+Q.9) Write a program to find out the max from given number.
+
+-->#include <stdio.h>
+main() {
+    int number;
+	int max = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    while (number > 0)
+	 {
+        int h = number % 10;
+        if (h > max)
+		{
+            max = h;
+        }
+        number /= 10;
+    }
+
+    printf("The maximum digit in the number is %d\n", max);
+
+   
+}
+
+Q.10) Write a program make a summation of given number.
+
+-->#include <stdio.h>
+
+int getSum(int n)
+{
+	int sum = 0;
+	while (n != 0) {
+		sum = sum + n % 10;
+		n = n / 10;
+	}
+	return sum;
+}
+
+int main()
+{
+	int n = 2214;
+
+	printf(" %d ", getSum(n));
+	return 0;
+}
+
+
+Q.11)Write a program you have to make a summation of first and last Digit.
+
+-->#include<stdio.h>
+
+int main() {
+    int number, FD, LD, sum;
+    
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    FD = number;
+    while(FD >= 10)
+	{
+        FD /= 10;
+    }
+ 
+    LD = number % 10;
+
+	 sum = FD+LD;
+
+    printf("The sum of first and last digit is: %d\n", sum);
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
