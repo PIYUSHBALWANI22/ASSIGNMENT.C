@@ -1,0 +1,590 @@
+Q.1) Write a program to create simple calculator using class.
+
+-->#include<iostream>
+using namespace std;
+class calculation
+{
+	public:
+		int number1;
+		int number2;
+		void Inputdata()
+            {
+				cout<<"Enter value of number 1 :"<<endl;
+				cin>>number1;
+				
+				cout<<"Enter value of number 2 :"<<endl;
+				cin>>number2;
+            }
+            
+        void Displaydata()
+        	{
+        		cout<<"Additon of number 1 and number 2 is :"<<number1+number2<<endl;
+        		cout<<"Subtraction of number 1 and number 2 is :"<<number1-number2<<endl;
+        		cout<<"Multipilcation of number 1 and number 2 is :"<<number1*number2<<endl;
+        		cout<<"Division of number 1 and number 2 is :"<<number1/number2<<endl;
+			}
+};
+main()
+{
+	calculation obj;
+	obj.Inputdata();
+	obj.Displaydata();
+}
+
+
+Q.2) Define a class to represent a bank account. Include the following members:
+
+1. Data Member:
+-Name of the depositor
+-Account Number
+-Type of Account
+-Balance amount in the account
+
+2. Member Functions
+-To assign values
+-To deposited an amount
+-To withdraw an amount after checking balance
+-To display name and balance
+
+-->#include<iostream>
+using namespace std;
+class bankaccount
+{
+	int accountnumber;
+	string name;
+	string account;
+	int amount;   //Data member
+	public:
+		void inputData()  //Member Function or method
+		{
+			cout<<"Enter account number:"<<endl;
+			cin>>accountnumber;
+			cout<<"Enter name of dipositor:"<<endl;
+			cin>>name;
+			cout<<"Enter type of account:"<<endl;
+			cin>>account;
+			cout<<"Enter amount:"<<endl;
+			cin>>amount;
+		}
+		void displayData()
+		{
+			cout<<"account number ="<<accountnumber<<endl;
+			cout<<"name of dipositor ="<<name<<endl;
+			cout<<"type of account ="<<account<<endl;
+			cout<<"amount="<<amount<<endl;
+			
+		}
+		
+};
+class MemberFunctions
+{
+	public:
+		int assignvalues;
+		int dipositamount;
+		int withdrawamount;
+		int balance;
+		string name;
+		
+		void inputData()
+		{
+			cout<<"Enter Assign Values :"<<endl;
+			cin>>assignvalues;
+			cout<<"Enter Deposit an Amount :"<<endl;
+			cin>>dipositamount;
+			cout<<"Enter withdraw amount after checking balance:"<<endl;
+			cin>>withdrawamount;
+			cout<<"Enter balance and name :"<<endl;
+			cin>>balance;
+			cin>>name;
+		}
+		void displayData()
+		{
+				cout<<"assign values"<<assignvalues<<endl;
+				cout<<"deposit an amount"<<dipositamount<<endl;
+				cout<<"withdraw amount after checking balance"<<withdrawamount<<endl;
+				cout<<"balance:"<<balance<<endl;
+				cout<<"name:"<<name<<endl;
+				
+		}
+		
+		
+};
+		main()
+		{
+			bankaccount obj;
+			obj.inputData();
+			obj.displayData();
+			
+			MemberFunctions o;
+			o.inputData();
+			o.displayData();
+		}
+		
+
+Q.3)Write a program to find the multiplication values and the cubic values using
+inline function.
+
+-->#include<iostream>
+using namespace std;
+inline int multiplication(int x)
+{
+	int result=x*x;
+	return result;
+}
+main()
+{
+	cout<<"multiplication :"<<multiplication(5);
+}
+
+
+Q.4)Write a program of Addition, Subtraction, Division, Multiplication using
+constructor.
+
+-->#include<iostream>
+using namespace std;
+class calculation
+{
+	public:
+		calculation()
+		{
+			cout<<"Welcome to Constuctor Calculation"<<endl<<endl;
+		}
+	calculation(int number1,int number2)
+	{
+				cout<<"Additon of number 1 and number 2 is :"<<number1+number2<<endl;
+        		cout<<"Subtraction of number 1 and number 2 is :"<<number1-number2<<endl;
+        		cout<<"Multipilcation of number 1 and number 2 is :"<<number1*number2<<endl;
+        		cout<<"Division of number 1 and number 2 is :"<<number1/number2<<endl;
+	}
+};
+main()
+{
+	calculation s1=calculation();
+	calculation s2=calculation(200,100);
+}
+
+
+Q.5)Assume a class cricketer is declared. Declare a derived class batsman from
+cricketer. Data member of batsman. Total runs, Average runs and best
+performance. Member functions input data, calculate average runs, Display
+data. (Single Inheritance)
+
+-->#include<iostream>
+using namespace std;
+class cricketer
+{
+	public:
+		void batsman(int players,int totalrun, float avgrun)
+		{
+			cout<<"The numbers of players is :";
+			cin>>players;
+			cout<<"Total players of match is :"<<players<<endl;
+			
+			cout<<"Total runs is :";
+			cin>>totalrun;
+			cout<<"Total runs of bats-man is :"<<totalrun<<endl;
+			
+			
+			avgrun=totalrun/players;
+			cout<<"Averange runs of bats-man is :"<<avgrun<<endl;
+			}
+};
+class datainput : public cricketer
+{
+	public:
+		void inputdata()
+		{
+			cout<<"perfomance is excellent"<<endl;
+		}
+		
+};
+main()
+{
+	datainput obj;
+	obj.batsman(5,100,20);
+	obj.inputdata();
+	
+}
+
+
+Q.6)Create a class person having members name and age. Derive a class student
+having member percentage. Derive another class teacher having member
+salary. Write necessary member function to initialize, read and write data.
+Write also Main function (Multiple Inheritance)
+
+-->#include<iostream>
+using namespace std;
+class student 
+{
+	public:
+		void percentage(int total_mark,int subject,float percentage)
+		{
+			cout<<"You have 5 subject"<<endl;
+			
+			cout<<"Enter your total mark from 500 :"<<endl;
+			cin>>total_mark;
+			
+			percentage=(total_mark*100)/500;
+			cout<<"Your percentage is :"<<percentage<<endl;
+		}
+};
+class teacher
+{
+	public:
+		void salary(int salary)
+		{
+			cout<<"Enter the salary :";
+			cin>>salary;
+			cout<<"teacher salary is :"<<salary<<endl;
+		}
+};class person: public student,public teacher
+{
+	public:
+		void name_age(string name,int age)
+		{
+			cout<<"Enter your name :";
+			cin>>name;
+			cout<<"The name of person is :"<<name<<endl;
+			
+			cout<<"Enter your age :";
+			cin>>age;
+			cout<<"The age of person is :"<<age<<endl;
+		}
+};
+main()
+{
+	person obj;
+	obj.percentage(1,2,3);
+	obj.salary(11);
+	obj.name_age("Piyush",10);
+}
+
+
+Q.7)Assume that the test results of a batch of students are stored in three different
+classes. Class Students are storing the roll number. Class Test stores the marks
+obtained in two subjects and class result contains the total marks obtained in
+the test. The class result can inherit the details of the marks obtained in the
+test and roll number of students. (Multilevel Inheritance)
+
+-->#include<iostream>
+using namespace std;
+class student
+{
+	public:
+		void rollnum(int rollnumber)
+		{
+			cout<<"Enter the roll number :";
+			cin>>rollnumber;
+			cout<<"Your roll number is :"<<rollnumber<<endl;
+		}
+};
+class test : public student
+{
+	public: 
+	void mark(int subject1,int subject2,int total)
+	{
+		cout<<"Enter the obtained marks of subject 1 :";
+		cin>>subject1;
+		cout<<"Your obtained marks of subject 1 is :"<<subject1<<endl;
+		
+		
+		cout<<"Enter the obtained marks of subject 2 :";
+		cin>>subject2;
+		cout<<"Your obtained marks of subject 2 is :"<<subject2<<endl;
+		
+		total=subject1+subject2;
+		cout<<"The total of two subject is :"<<total<<endl;
+	}
+};
+class result: public test
+{
+	public:
+		void totalmarks()
+		{
+			cout<<"this is your result";
+		}
+};
+main()
+{
+	result object;
+	object.rollnum(1);
+	object.mark(1,2,3);
+	object.totalmarks();
+}
+
+
+
+Q.8)Write a program to Mathematic operation like Addition, Subtraction,
+Multiplication, Division Of two number using different parameters and
+Function Overloading
+
+
+-->#include<iostream>
+using namespace std;
+int addition(int num1,float num2)
+{
+	return num1+num2;
+}
+int subtraction(int num1,int num2,float num3)
+{
+	return num1-num2-num3;
+}
+int multiplication(int num1,double num2)
+{
+	return num1*num2;
+}
+int division(int num1,int num2)
+{
+	return num1/num2;
+}
+main()
+{
+	cout<<"\nAddition of number 1 and number 2 is :"<<addition(100,50);
+	cout<<"\nSubtraction of number 1 and number 2 and number 3 :"<<subtraction(250,100,50);
+	cout<<"\nMultiplication of number 1 and number 2 :"<<multiplication(100,20);
+	cout<<"\nDivision of number 1 and number 2 :"<<division(100,50);
+}
+
+
+Q.9)Write a Program of Two 1D Matrix Addition using Operator Overloading.
+
+-->#include<iostream>
+using namespace std;
+
+class Matrix
+{
+        int a[3][3];
+    public:
+        void accept();
+        void display();
+        void operator +(Matrix x);
+};
+void Matrix::accept()
+{
+        cout<<"\n Enter Matrix Element (3 X 3) : \n";
+        for(int i=0; i<3; i++)
+        {
+                for(int j=0; j<3; j++)
+                {
+                        cout<<" ";
+                        cin>>a[i][j];
+                }
+        }
+}
+void Matrix::display()
+{
+        for(int i=0; i<3; i++)
+        {
+                cout<<" ";
+                for(int j=0; j<3; j++)
+                {
+                        cout<<a[i][j]<<"\t";
+                }
+                cout<<"\n";
+        }
+}
+void Matrix::operator +(Matrix x)
+{
+        int mat[3][3];
+        for(int i=0; i<3; i++)
+        {
+                for(int j=0; j<3; j++)
+                {
+                        mat[i][j]=a[i][j]+x.a[i][j];
+                }
+        }
+        cout<<"\n Addition of Matrix : \n\n";
+        for(int i=0; i<3; i++)
+        {
+                cout<<" ";
+                for(int j=0; j<3; j++)
+                {
+                        cout<<mat[i][j]<<"\t";
+                }
+                cout<<"\n";
+        }
+}
+int main()
+{
+        Matrix m,n;
+        m.accept();       
+        n.accept();      
+        cout<<"\n First Matrix : \n\n";
+        m.display();   
+        cout<<"\n Second Matrix : \n\n";
+        n.display(); 
+        m+n;        
+        return 0;
+}
+
+
+Q.10)Write a program to concatenate the two strings using Operator Overloading.
+
+-->#include <iostream>
+using namespace std;
+
+int main()
+{
+    string s1, s2, result;
+
+    cout << "Enter string s1: ";
+    getline (cin, s1);
+
+    cout << "Enter string s2: ";
+    getline (cin, s2);
+
+    result = s1 + s2;
+
+    cout << "Resultant String = "<< result;
+
+    return 0;
+}
+
+
+Q.11)Write a program to calculate the area of circle, rectangle and triangle using
+Function Overloading.
+
+-->#include<iostream>
+using namespace std;
+int calculate(int area,int breadth)
+{
+	int rectangle = area * breadth;
+	return rectangle;	
+}
+float calculate(float area,float breadth)
+{
+	int triangle = area * breadth * 0.5;
+	return triangle;
+}
+float calculate(float area)
+{
+	float circle = 3.14 * area * area;
+	return circle;
+};
+main()
+{
+	cout<<"Area of Rectangle :"<<calculate(200,100)<<endl;
+	cout<<"Area of triangle :"<<calculate(20,10)<<endl;
+	cout<<"Area of Circle :"<<calculate(200)<<endl;
+}
+
+
+
+Q.12)Write a program to swap the two numbers using friend function without
+using third variable.
+
+-->#include<iostream>
+using namespace std;
+class A
+{
+	private:
+		int a;
+		int b;
+		
+		public:
+			friend void setData();
+};
+void setData()
+{
+	A obj;
+	obj.a=100;
+	obj.b=150;
+	
+	obj.a=obj.a+obj.b;
+	
+	obj.b=obj.a-obj.b;
+	cout<<"The value of B is :"<<obj.b<<endl;
+	
+	obj.a=obj.a-obj.b;
+	cout<<"The value of A is :"<<obj.a<<endl;
+}
+main()
+{
+	setData();
+}
+
+
+Q.13)Write a program to find the max number from given two numbers using
+friend function.
+
+-->#include<iostream>
+
+using namespace std;
+class A
+{
+	private:
+		int x,y;
+		
+		public:
+			friend void setData();
+};
+void setData()
+{
+	A obj;
+	obj.x;
+	obj.y;
+	
+	cout<<"Enter the value of X :"<<endl;
+	cin>>obj.x;
+	
+	cout<<"Enter the value of Y :"<<endl;
+	cin>>obj.y;
+	
+	if(obj.x>obj.y)
+	{
+		cout<<"The Max number is X "<<endl;
+	}
+	else if (obj.x<obj.y)
+	{
+		cout<<"The Max number is Y "<<endl;
+	}
+	else
+	{
+		cout<<"There Are Same Number "<<endl;
+	}
+}
+main()
+{
+	setData();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

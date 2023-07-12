@@ -1,0 +1,61 @@
+Q.1) Write a program to print “Hello World” using C++.
+
+-->#include<iostream>
+using namespace std;
+main()
+{
+	cout<<"Hello World";
+}
+
+
+Q.2)What is OOP? List OOP concepts.
+
+--> OOPS:- Object Oriented Programming System. 
+
+ List OOPS :-
+
+         - Class and Object
+         - Constructors
+         - Encapsulation
+         - Inheritance
+         - This Pointer
+         - Array with Class
+         - friend Function
+         - Inline Function
+         - File Handing
+         - Template
+
+
+Q.3)What is the difference between OOP and POP?
+
+--> OOPS:- Object Oriented Programming System.
+
+--  OOPs stands for Object Oriented Programming System which is divided to object and their interactions. Exp,.. C++ , JAVA…
+
+     POP :-  Post Office Protocol / Procedural Oriented Programming.
+
+--  POP stands for Procedural Oriented Programming which is divided into functions and interacts . Exp ,.. C , Pascal …
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
