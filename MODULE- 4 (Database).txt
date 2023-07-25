@@ -1,0 +1,332 @@
+Q.1) What do you understand By Database?
+
+--> A database is an organized collection of structured information, or data, typically stored electronically in a computer system. A database is usually controlled by a database management system (DBMS).
+
+Q.2)What is Normalization?
+
+-->. Normalization is the process of minimizing redundancy from a relation or set of relations.
+Redundancy in relation may cause insertion, deletion and Updation anomalies. So, it helps to minimize the redundancy in relations.
+
+
+Q.3)What is difference between DBMS and RDBMS?
+
+-->DBMS stands for Database Management System, and RDBMS is the acronym for the Relational Database Management system. In DBMS, the data is stored as a file, whereas in RDBMS, data is stored in the form of tables.
+DBMS—Data base management system
+RDBMS—Relational database management system
+
+
+Q.4)What is MF Cod Rule of RDBMS Systems?
+
+
+-->MF Cod Rule of RDBMS Systems refers to the "Codd's 12 rules" which are a set of thirteen rules (numbered zero to twelve) proposed by Edgar F. Codd, a pioneer of the relational model for databases, designed to define what is required from a database management system in order for it to be considered relational. 
+
+The rules are as follows:
+- Rule 0: Foundation Rule
+- Rule 1: Information Rule
+- Rule 2: Guaranteed Access Rule
+- Rule 3: Systematic Treatment of Null Values
+- Rule 4: Active Online Catalog based on the Relational Model
+- Rule 5: The Comprehensive Data Sublanguage Rule
+- Rule 6: View Updating Rule
+- Rule 7: High-Level Insert, Update, and Delete Rule
+- Rule 8: Physical Data Independence
+- Rule 9: Logical Data Independence
+- Rule 10: Integrity Independence
+- Rule 11: Distribution Independence
+- Rule 12: Nonsubversion Rule
+
+
+Q.5)What do you understand by data redundancy?
+
+-->Redundancy in relation may cause insertion, deletion and Updation anomalies. So, it helps to minimize the redundancy in relations.
+
+
+Q.6)What is DDL Interpreter?
+
+-->It processes the DDL statements into a set of table containing meta data.
+DDL—Data definition language
+There are 3 commands in DDL
+1)	CREATE
+2)	ALTER
+3)	DROP
+
+
+Q.7)What is DML Compiler in SQL?
+
+-->It processes the DML statements into low level instruction, so that they can be executed. 
+DML—Data manipulation language
+There are 3 commands in DML
+1)	INSERT
+2)	UPDATE
+3)	DELETE
+
+
+
+Q.8)What is SQL Key Constraints writing an Example of SQL Key Constraints.
+
+-->SQL constraints are used to specify rules for the data in a table. Constraints are used to limit the type of data that can go into a table. This ensures the accuracy and reliability of the data in the table. If there is any violation between the constraint and the data action, the action is aborted.
+
+
+Q.9)What is save Point? How to create a save Point write a Query?
+
+-->A save point is a point in a transaction when you can roll the transaction back to a certain point without rolling back the entire transaction
+Query—SAVEPOINT SAVEPOINT_NAME;
+
+
+Q.10)What is trigger and how to create a Trigger in SQL?
+
+
+--> A SQL trigger is a database object which fires when an event occurs in a database. For example, we can execute a SQL query that will "do something" in a database when a change occurs on a database table, such as when a record is inserted, updated, or deleted.
+
+DELIMITER $$
+
+CREATE TRIGGER Trigger name AFTER INSERT ON table name FOR EACH ROW
+BEGIN
+
+INSERT INTO table name(statements) VALUES(statements ,"Record Inserted!");
+
+END
+
+
+                                                            
+
+
+
+                                                                                     TASK
+
+
+
+Q.1) Create table Student and Exam.
+
+--> Student
+
+         CREATE TABLE student
+(
+    Roll_no int PRIMARY KEY AUTO_INCREMENT,
+    Student_name varchar (50),
+    branch varchar (50)
+)
+
+Insert values
+
+INSERT INTO student(Roll_no,Student_name,branch) VALUES(1,"Tony","computer science");
+INSERT INTO student(Roll_no,Student_name,branch) VALUES(2,"Natasha","electronic and com");
+INSERT INTO student(Roll_no,Student_name,branch) VALUES(3,"Wanda"," electronic and com ");
+
+ Exam
+
+CREATE TABLE Exam
+(
+    Roll_number int PRIMARY KEY AUTO_INCREMENT,
+    S_code varchar (50),
+    Marks int ,
+    P_code varchar (50),
+    Roll_no_fk int,
+    FOREIGN KEY(Roll_no_fk) REFERENCES student(Roll_no)
+)
+
+Insert value
+
+INSERT INTO `exam` (`Roll_number`, `S_code`, `marks`, `P_code`, `Roll_no_fk`) VALUES (NULL, 'CS11', '50', 'CS', '1'), 
+INSERT INTO `exam` (`Roll_number`, `S_code`, `marks`, `P_code`, `Roll_no_fk`) VALUES (NULL, 'CS12', '60', 'CS', '1'),
+INSERT INTO `exam` (`Roll_number`, `S_code`, `marks`, `P_code`, `Roll_no_fk`) VALUES (NULL, 'EC101', '66', 'EC', '2'), 
+INSERT INTO `exam` (`Roll_number`, `S_code`, `marks`, `P_code`, `Roll_no_fk`) VALUES (NULL, 'EC102', '70', 'EC', '2'),
+ INSERT INTO `exam` (`Roll_number`, `S_code`, `marks`, `P_code`, `Roll_no_fk`) VALUES (NULL, EC101', '45', 'EC', '3'),
+ INSERT INTO `exam` (`Roll_number`, `S_code`, `marks`, `P_code`, `Roll_no_fk`) VALUES (NULL,'EC102', '45', 'EC', 3);
+
+
+Q.2) Create table information in person_data database
+
+-->information
+
+CREATE TABLE information
+(
+   First_name varchar (50) PRIMARY KEY AUTO INCREMENT,
+   Last_name  varchar (50),
+  Address varchar (50),
+  City varchar (50),
+  Age int 
+)
+
+Insert values
+
+INSERT INTO `information` (`first_name`, `last_name`, `address`, `city`, `age`) VALUES ('TONY', 'STARK', 'STARK MANSION', 'MIAMI', '42'),
+INSERT INTO `information` (`first_name`, `last_name`, `address`, `city`, `age`) VALUES ('BRUCE', 'BANNER', '218 STREET', 'MANHATON', '54'),
+ INSERT INTO `information` (`first_name`, `last_name`, `address`, `city`, `age`) VALUES ('WANDA', 'MAXIMORF', 'SKVIA STREET 22', 'SUKOVIA', '22'),
+INSERT INTO `information` (`first_name`, `last_name`, `address`, `city`, `age`) VALUES ('PETER', 'PARKER', '109 FILATE TOWER', 'QUEENS', '19'),
+INSERT INTO `information` (`first_name`, `last_name`, `address`, `city`, `age`) VALUES ('STEFEN', 'STRANGE', 'BLEEKER STREET 171/A', 'NEW YORK CITY', '28'),
+INSERT INTO `information` (`first_name`, `last_name`, `address`, `city`, `age`) VALUES ('THOR', 'ODINSON', 'ROYAL FORT', 'ASGARD', '1500'), 
+INSERT INTO `information` (`first_name`, `last_name`, `address`, `city`, `age`) VALUES ('SCOTT', 'LANG', '223 STREET', 'SAN FARANCISCO', '32'),
+INSERT INTO `information` (`first_name`, `last_name`, `address`, `city`, `age`) VALUES ('STEVE', 'ROGERS', 'STREET 136', 'NEW YORK CITY', '105');
+
+
+Q.3) Create table given below:
+
+-->1) Employee
+
+CREATE TABLE Employee
+(
+	Employee_id int PRIMARY KEY AUTO_INCREMENT,
+    first_name varchar (50),
+    last_name varchar (50),
+    salary int,
+    joining_date varchar (50),
+    department varchar (50)
+)
+
+Insert values
+
+INSERT INTO `employee` (`Employee_id`, `first_name`, `last_name`, `salary`, `joining_date`, `department`) VALUES (NULL, 'JOHN', 'ABRAHAM', '1000000', '01-JAN-13  12.00.00 AM', 'BANKING'),
+INSERT INTO `employee` (`Employee_id`, `first_name`, `last_name`, `salary`, `joining_date`, `department`) VALUES (NULL, 'MICHAEL', 'CLARKE', '800000', '01-JAN-13  12.00.00 AM', 'INSURANCE'), 
+INSERT INTO `employee` (`Employee_id`, `first_name`, `last_name`, `salary`, `joining_date`, `department`) VALUES (NULL, 'ROY', 'THOMAS', '700000', '01-FEB-13  12.00.00 AM', 'BANKING'),
+INSERT INTO `employee` (`Employee_id`, `first_name`, `last_name`, `salary`, `joining_date`, `department`) VALUES (NULL, 'TOM', 'JOSE', '600000', '01-FEB-13  12.00.00 AM', 'INSURANCE'), 
+INSERT INTO `employee` (`Employee_id`, `first_name`, `last_name`, `salary`, `joining_date`, `department`) VALUES (NULL, 'JERRY', 'PINTO', '650000', '01-FEB-13  12.00.00 AM', 'INSURANCE'),
+INSERT INTO `employee` (`Employee_id`, `first_name`, `last_name`, `salary`, `joining_date`, `department`) VALUES (NULL, 'PHILIP', 'MATHEW', '750000', '01-JAN-13  12.00.00 AM', 'SERVICES'),
+INSERT INTO `employee` (`Employee_id`, `first_name`, `last_name`, `salary`, `joining_date`, `department`) VALUES (NULL, 'DILIP', 'DABHI', '650000', '01-JAN-13  12.00.00 AM', 'SERVICES'),
+INSERT INTO `employee` (`Employee_id`, `first_name`, `last_name`, `salary`, `joining_date`, `department`) VALUES (NULL, 'SHIVARSH', 'VAGHELA', '600000', '01-FEB-13  12.00.00 AM', 'INSURANCE');
+
+
+2)  Incentive
+
+CREATE TABLE Incentive
+(
+	Employee_ref_id int PRIMARY KEY AUTO_INCREMENT,
+              incentive_date varchar (50),
+              incentive_amount int 
+)
+
+Insert value
+
+INSERT INTO `incentive` (`Employee_ref_id`, `incentive_date`, `incentive_amount`) VALUES ('1', '01-FEB-13', '5000'),
+INSERT INTO `incentive` (`Employee_ref_id`, `incentive_date`, `incentive_amount`) VALUES ('2', '01-FEB-13', '3000'),
+INSERT INTO `incentive` (`Employee_ref_id`, `incentive_date`, `incentive_amount`) VALUES ('3', '01-FEB-13', '4000'), 
+INSERT INTO `incentive` (`Employee_ref_id`, `incentive_date`, `incentive_amount`) VALUES ('1', '01-JAN-13', '4500'), 
+INSERT INTO `incentive` (`Employee_ref_id`, `incentive_date`, `incentive_amount`) VALUES ('2', '01-JAN-13', '3500');
+
+     A) Get First_Name from employee table using Tom name “Employee Name”
+
+--> SELECT * FROM employee WHERE Employee_id=4
+
+    B) Get FIRST_NAME, Joining Date, and Salary from employee table.
+
+-->SELECT first_name,salary,joining_date FROM employee
+
+    C) Get all employee details from the employee table order by First_Name Ascending and Salary descending?
+
+-->SELECT * FROM employee ORDER BY first_name ASC
+     SELECT * FROM employee ORDER BY salary DESC
+
+    D) Get employee details from employee table whose first name contains ‘J’.
+
+-->SELECT * FROM employee WHERE first_name LIKE 'j%'
+
+    E) Get department wise maximum salary from employee table order by salary ascending?
+
+-->SELECT * FROM employee ORDER by salary ASC
+
+    F) Select first_name, incentive amount from employee and incentives table for those employees who have incentives and     incentive amount greater than 3000.
+
+-->SELECT * FROM incentive WHERE incentive_amount>3000
+
+   G) Create After Insert trigger on Employee table which insert records in view table
+
+-->View table 
+
+CREATE TABLE view_table
+(
+	Employee_id int,
+    first_name varchar (50),
+    last_name varchar (50),
+    salary int,
+    joining_date varchar (50),
+    department varchar (50),
+    date_time timestamp,
+    action_performed varchar (50)
+)
+
+Insert trigger
+
+DELIMITER $$
+
+CREATE TRIGGER insert_trigger AFTER INSERT ON employee FOR EACH ROW
+BEGIN
+
+INSERT INTO view_table(Employee_id,first_name,last_name,salary,joining_date,department,action_performed) VALUES(new.employee_id,new.first_name,new.last_name,new.salary,new.joining_date,new.department,"record inserted");
+
+END
+
+
+Insert value
+
+INSERT INTO `employee` (`Employee_id`, `first_name`, `last_name`, `salary`, `joining_date`, `department`) VALUES (NULL, 'dilip', 'dabhi', '300000', '22/05/2020  12.00 am', 'income tax'), 
+INSERT INTO `employee` (`Employee_id`, `first_name`, `last_name`, `salary`, `joining_date`, `department`) VALUES (NULL, 'shivarsh', 'vaghela', '200000', '30/01/2004', 'collector');
+
+
+Q.4) Create table given below: Salesperson and Customer
+
+CREATE TABLE Salesperson
+(
+    SNO INT PRIMARY KEY,
+    SNAME VARCHAR (50),
+    CITY VARCHAR (50),
+    COMM VARCHAR (50)
+    )
+
+Insert values
+
+INSERT INTO `salesperson` (`SNo`, `SNAME`, `CITY`, `COMM`) VALUES ('1001', 'Peel', 'London', '. 12'),
+INSERT INTO `salesperson` (`SNo`, `SNAME`, `CITY`, `COMM`) VALUES ('1002', 'Serres', 'San Jose', '. 13'),
+INSERT INTO `salesperson` (`SNo`, `SNAME`, `CITY`, `COMM`) VALUES ('1004', 'Motika', 'London', '. 11'),
+INSERT INTO `salesperson` (`SNo`, `SNAME`, `CITY`, `COMM`) VALUES ('1007', 'Rafkin', 'Barcelona', '. 15'),
+INSERT INTO `salesperson` (`SNo`, `SNAME`, `CITY`, `COMM`) VALUES ('1003', 'Axelord', 'New york', '. 1');
+
+	Customer
+
+CREATE TABLE Customer
+(
+	CNM int PRIMARY KEY,
+    CNAME varchar (50),
+    CITY varchar (50),
+    RATING int,
+    SNo_fk int,
+    FOREIGN KEY(SNo_fk)REFERENCES salesperson(SNo)
+)
+
+
+Insert value
+
+INSERT INTO `customer` (`CNM`, `CNAME`, `CITY`, `RATING`, `SNo_fk`) VALUES ('201', 'Hoffman', 'London', '100', '1001'), 
+INSERT INTO `customer` (`CNM`, `CNAME`, `CITY`, `RATING`, `SNo_fk`) VALUES ('202', 'Giovvane', 'Roe', '200', '1003'),
+INSERT INTO `customer` (`CNM`, `CNAME`, `CITY`, `RATING`, `SNo_fk`) VALUES ('203', 'Liu', 'San Jose', '300', '1002'),
+INSERT INTO `customer` (`CNM`, `CNAME`, `CITY`, `RATING`, `SNo_fk`) VALUES ('204', 'Grass', 'Barcelona', '100', '1002'), 
+INSERT INTO `customer` (`CNM`, `CNAME`, `CITY`, `RATING`, `SNo_fk`) VALUES ('206', 'Clemens', 'London', '300', '1007'), 
+INSERT INTO `customer` (`CNM`, `CNAME`, `CITY`, `RATING`, `SNo_fk`) VALUES ('207', 'Pereira', 'Roe', '100', '1004');
+
+
+Retrieve the below data from above table
+
+B) Names and cities of all salespeople in London with commission above 0.12 
+
+SELECT * FROM salesperson WHERE COMM>.12
+
+C) All salespeople either in Barcelona or in London
+
+SELECT * FROM salesperson WHERE CITY='barcelona' OR CITY='london'
+
+D) All salespeople with commission between 0.10 and 0.12. (Boundary values should be excluded)
+
+SELECT * FROM salesperson WHERE COMM =.11
+
+E) All customers excluding those with rating <= 100 unless they are located in Rome
+
+SELECT * FROM customer WHERE RATING<=100 AND CITY NOT IN ('ROE')
+
+
+
+
+
+
+
+
+
+
